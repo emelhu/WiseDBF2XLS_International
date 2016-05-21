@@ -89,6 +89,8 @@ namespace WiseDBF2XLS_International
             }
 
             columnIx = 0;
+
+            count++;
           }
 
 
