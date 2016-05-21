@@ -11,5 +11,14 @@ Most conversion utilities can't manage charsets and demage DBF content when conv
 
 This utility is a simple exe (although it use .net environment) and directly read DBF file and write XLS file.
 
+...and more... dBaseIII is a well-known format, but I had couldn't read DBF version 4,5,6,7 with Excel or LibraOffice... this utility read these correctly.
 
-Freeware by eMeL ( www.emel.hu )
+used components:
+https://github.com/emelhu/NDbfReaderEx  for read DBF & DBT
+https://code.google.com/archive/p/excellibrary/  for write XLS
+
+so the formats and limitations same as in this packages.
+
+It's a command line utility and requires the .Net Framework 4.5.2.
+
+Freeware by eMeL ( www.emel.hu )  MIT licence

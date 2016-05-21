@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 
 namespace eMeL
 {
@@ -73,6 +74,55 @@ namespace eMeL
     };
 
     //
+
+    public static int GetEncodingCodePageFromCodepageCodes(CodepageCodes codepageCode)
+    {
+      switch (codepageCode)
+      {
+        case CodepageCodes.OEM:
+          return CultureInfo.CurrentCulture.TextInfo.OEMCodePage;   
+        case CodepageCodes.CP437:
+          return 437;
+        case CodepageCodes.CP850:
+          return 850;
+        case CodepageCodes.CP1252:
+          return 1252;
+        case CodepageCodes.ANSI:
+          return CultureInfo.CurrentCulture.TextInfo.ANSICodePage;  
+        case CodepageCodes.CP737:
+          return 737;
+        case CodepageCodes.CP852:
+          return 852;
+        case CodepageCodes.CP857:
+          return 857;
+        case CodepageCodes.CP861:
+          return 861;
+        case CodepageCodes.CP865:
+          return 865;
+        case CodepageCodes.CP866:
+          return 866;
+        case CodepageCodes.CP950:
+          return 950;
+        case CodepageCodes.CP936:
+          return 936;
+        case CodepageCodes.CP932:
+          return 932;
+        case CodepageCodes.CP1255:
+          return 1255;
+        case CodepageCodes.CP1256:
+          return 1256;
+        case CodepageCodes.CP1250:
+          return 1250;
+        case CodepageCodes.CP1251:
+          return 1251;
+        case CodepageCodes.CP1254:
+          return 1254;
+        case CodepageCodes.CP1253:
+          return 1253;
+      }
+
+      return int.MinValue;
+    }
 
     /// <summary>
     /// 
